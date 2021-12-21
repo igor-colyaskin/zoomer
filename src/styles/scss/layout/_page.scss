@@ -1,7 +1,24 @@
-.wrapper-page {
+.wrapper {
   height: 380px;
   width: 300px;
   margin: 0 auto;
   padding: 12px;
+  background: silver;
+}
+.window{
+  position: relative;
+  height: 120px;
+  width: 120px;
+  margin: 0 auto;
+  background: violet;
+  overflow: hidden;
+  z-index: 1;
+}
+.container {
+  position: relative;
+  top: -16px;
+  height: 140px;
+  width: 120px;
+  margin: 0 auto;
   background: silver;
 }
