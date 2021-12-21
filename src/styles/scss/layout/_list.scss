@@ -4,22 +4,58 @@
   background: chocolate;
   box-sizing: border-box;
 }
-.high {height: 40px;}
-.low {height: 16px}
-#point-1 {background: red}
-#point-2 {background: orange}
-#point-3 {background: yellow}
-#point-4 {background: limegreen}
-#point-5 {background: aqua}
-#point-6 {background: blue}
+
+.high {
+  height: 40px;
+}
+
+.low {
+  height: 16px
+}
+
+#point-1 {
+  background: red
+}
+
+#point-2 {
+  background: orange
+}
+
+#point-3 {
+  background: yellow
+}
+
+#point-4 {
+  background: limegreen
+}
+
+#point-5 {
+  background: aqua
+}
+
+#point-6 {
+  background: blue
+}
+
+#point-7 {
+  background: darkviolet
+}
 
 .scroll {
   position: absolute;
   height: 16px;
   width: 120px;
-  background: transparent;
-  border: 2px solid black;
+  background: rgba(255, 255, 255, 0.5);
+
   box-sizing: border-box;
 }
-.scroll-up {top: 0}
-.scroll-down {bottom: 0}
+
+.scroll-up {
+  top: 0;
+  border-bottom: 2px dotted white;
+}
+
+.scroll-down {
+  bottom: 0;
+  border-top: 2px dotted white;
+}
