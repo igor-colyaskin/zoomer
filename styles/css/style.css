@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700;900&display=swap");
+html {
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+code, kbd, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: .35em 0.75em .625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"], [type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+.button {
+  width: 60px;
+  height: 36px;
+  margin: 8px 0;
+  color: yellowgreen;
+}
+
+.change-theme {
+  height: 48px;
+  width: 60px;
+  margin: 6px;
+  border: none;
+  background-color: teal;
+  color: white;
+}
+
+.button-red {
+  background-color: darkviolet;
+}
+
+.button-green {
+  background-color: green;
+}
+
+.button-blue {
+  background-color: blueviolet;
+}
+
+.ref {
+  display: block;
+  height: 36px;
+  width: 60px;
+  margin: 6px;
+  padding-top: 6px;
+  background-color: darkviolet;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.wrapper-logo {
+  width: 60px;
+  height: 48px;
+  margin: 6px;
+  padding-top: 4px;
+  background-color: salmon;
+  text-align: center;
+  color: white;
+}
+
+#wrapper-page {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 72px;
+}
+
+.header-light {
+  background-color: #f3b79b;
+}
+
+.header-dark {
+  background-color: #802c05;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  height: 48px;
+  margin: 6px;
+}
+
+.main {
+  height: 500px;
+  width: 100%;
+  background-color: #263238;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.main-content-home {
+  height: 360px;
+  width: 720px;
+  padding: 12px;
+  background-color: #263238;
+  color: lightgrey;
+  font-size: 18px;
+  font-family: Consolas, monospace;
+}
+
+.att {
+  color: lime;
+}
+
+.lime {
+  color: white;
+}
+
+.formula,
+.result {
+  height: 300px;
+  margin: 6px;
+  background-color: #263238;
+}
+
+.result {
+  width: 280px;
+  border-left: 1px solid lightgrey;
+  padding-left: 6px;
+}
+
+.formula {
+  width: 96px;
+  color: lime;
+  border-right: 1px solid lightgrey;
+  font-size: 32px;
+  text-align: right;
+  padding-right: 6px;
+}
+
+.main-content-add.formula {
+  width: 60px;
+}
+
+.word-result,
+.word-typeof {
+  color: lightgrey;
+  font-size: 36px;
+  font-family: Consolas, monospace;
+}
+
+.value-result,
+.value-typeof {
+  color: lime;
+  font-size: 24px;
+  font-family: Consolas, monospace;
+}
+
+.value-typeof {
+  color: darksalmon;
+}
+
+.type-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 240px;
+  height: 480px;
+  margin: 2px;
+}
+
+.type-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 240px;
+  height: 24px;
+  margin: 2px;
+  background-color: #263238;
+}
+
+.type-choice {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  border: 1px solid lightgrey;
+  background-color: #263238;
+}
+
+.type-choice.active {
+  background-color: lime;
+}
+
+.type-description {
+  padding-left: 4px;
+  color: lightgrey;
+  font-family: Consolas, monospace;
+}
+
+.var-body {
+  color: lime;
+  font-weight: 500;
+  font-family: Consolas, monospace;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+}
+
+.footer-light {
+  background-color: #f3b79b;
+}
+
+.footer-dark {
+  background-color: #802c05;
+}

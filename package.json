@@ -1,0 +1,29 @@
+{
+  "name": "webpack_01",
+  "version": "1.0.0",
+  "description": "learning Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve"
+  },
+  "keywords": [],
+  "author": "Igor Kolyaskin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.14.6",
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/preset-env": "7.14.7",
+    "babel-loader": "8.2.2",
+    "clean-webpack-plugin": "3.0.0",
+    "css-loader": "^6.1.0",
+    "html-webpack-plugin": "5.3.2",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.1.0",
+    "webpack": "5.45.1",
+    "webpack-cli": "4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
