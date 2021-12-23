@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe300a54-d4a5-4a11-b35d-3883423b7716" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/js/bll/onPointMouseEnter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/bll/onScrollMouseEnter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/components/Window.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/components/ListContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/bll/onScrollMouseEnter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/bll/onScrollMouseEnter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/bll/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/bll/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Window.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_page.scss" afterDir="false" />
     </list>
@@ -41,7 +42,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640066928990</updated>
-      <workItem from="1640066931675" duration="16670000" />
+      <workItem from="1640066931675" duration="18724000" />
+      <workItem from="1640100045335" duration="781000" />
+      <workItem from="1640255728234" duration="5765000" />
     </task>
     <task id="LOCAL-00001" summary="for-zoomer: pure points">
       <created>1640074798357</created>
@@ -64,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640086493828</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="for-zoomer: find rect coords">
+      <created>1640094698978</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640094698978</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,16 +116,16 @@
     </option>
     <option name="OPEN_GENERIC_TABS">
       <map>
-        <entry key="4449513f-292b-47ce-9700-bbc1b40bf8c2" value="TOOL_WINDOW" />
-        <entry key="c0232a16-f3b2-4411-b30d-1b1556f52080" value="TOOL_WINDOW" />
         <entry key="d537c55a-b257-4c4b-bf80-c38eb82ed48b" value="TOOL_WINDOW" />
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="for-zoomer: pure points" />
     <MESSAGE value="for-zoomer: add listener" />
     <MESSAGE value="for-zoomer: window added" />
-    <option name="LAST_COMMIT_MESSAGE" value="for-zoomer: window added" />
+    <MESSAGE value="for-zoomer: find rect coords" />
+    <option name="LAST_COMMIT_MESSAGE" value="for-zoomer: find rect coords" />
   </component>
 </project>

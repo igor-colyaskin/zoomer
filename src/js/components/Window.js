@@ -1,19 +1,23 @@
-import {onScrollDownMouseEnter, onScrollUpMouseEnter} from "../bll/onScrollMouseEnter";
+import {onScrollTopMouseEnter, onScrollBottomMouseEnter} from "../bll/onScrollMouseEnter";
+import {ListContainer} from './ListContainer'
+import {store} from '../bll/store'
 
 export const Window = () => {
+    const {windowHeight} = store.getState()
     const window = document.createElement('div')
     window.classList.add('window')
+    window.style.height = `${windowHeight}px`
 
-    const scrollUp = document.createElement('div')
-    scrollUp.classList.add('scroll')
-    scrollUp.classList.add('scroll-up')
-    scrollUp.addEventListener('mouseenter', onScrollUpMouseEnter)
+    const scrollTop = document.createElement('div')
+    scrollTop.classList.add('scroll')
+    scrollTop.classList.add('scroll-top')
+    scrollTop.addEventListener('mouseenter', onScrollTopMouseEnter)
 
-    const scrollDown = document.createElement('div')
-    scrollDown.classList.add('scroll')
-    scrollDown.classList.add('scroll-down')
-    scrollDown.addEventListener('mouseenter', onScrollDownMouseEnter)
+    const scrollBottom = document.createElement('div')
+    scrollBottom.classList.add('scroll')
+    scrollBottom.classList.add('scroll-bottom')
+    scrollBottom.addEventListener('mouseenter', onScrollBottomMouseEnter)
 
-    window.append(scrollUp, scrollDown)
+    window.append(ListContainer(), scrollTop, scrollBottom)
     return window
 }

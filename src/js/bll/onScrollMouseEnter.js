@@ -1,14 +1,17 @@
-export const onScrollUpMouseEnter = ()=>{
+export const onScrollTopMouseEnter = ()=>{
     const container = document.querySelector('.container')
     const coordinatesContainer = container.getBoundingClientRect()
 
-    container.style.top = `${coordinatesContainer.y + 4}px`
+    container.style.top = `${coordinatesContainer.y + 16}px`
 
-    console.log(coordinatesContainer.x, coordinatesContainer.y)
+    console.log(coordinatesContainer.y)
     // const window = document.querySelector('.window')
     // const coordinatesWindow = window.getBoundingClientRect()
     // console.log(coordinatesWindow.x, coordinatesWindow.y)
 }
-export const onScrollDownMouseEnter = ()=>{
-    console.log('down scroll')
+export const onScrollBottomMouseEnter = ()=>{
+    const container = document.querySelector('.container')
+    const coordinatesContainer = container.getBoundingClientRect()
+
+    container.style.top = `${coordinatesContainer.y - 16}px`
 }

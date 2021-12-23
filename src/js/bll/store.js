@@ -1,20 +1,17 @@
-
-const store = {
-  _state: {
-    common: {
-      theme: 'light',
-      currentPage: 'home',
+export const store = {
+    _state: {
+        shift: 16,
+        currentHighElement: 0,
+        windowHeight: 140,
+        elementHeight: 2,
+        elementNubmer: 100,
     },
-    aboutPage: {
-      messages: [],
-      newInputText: ''
-    }
-  },
-  getState() { return this._state },
-  //
-  // dispatch(action) {
-  //   this._state.common = commonReducer(this._state.common, action, this)
-  //   this._state.aboutPage = aboutPageReducer(this._state.aboutPage, action)
-  // }
+    getState() {
+        return this._state
+    },
+    //
+    // dispatch(action) {
+    //   this._state.common = commonReducer(this._state.common, action, this)
+    //   this._state.aboutPage = aboutPageReducer(this._state.aboutPage, action)
+    // }
 }
-export default store
