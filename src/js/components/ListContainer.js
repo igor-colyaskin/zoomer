@@ -1,20 +1,10 @@
 import {store} from '../bll/store'
+import {BACKGROUND_ARRAY} from '../constants/BACKGROUND_ARRAY'
 
 export const ListContainer = () => {
     const {shift, elementHeight, elementNumber} = store.getState()
     const listPosition = 20 - shift * 20
 
-    const backgroundArray = [
-        'deeppink',
-        'orange',
-        'gold',
-        'yellowgreen',
-        'aqua',
-        'blue',
-        'indigo',
-        'purple',
-        'black',
-        'magenta']
 
     const container = document.createElement('div')
     container.classList.add('container')
@@ -27,7 +17,7 @@ export const ListContainer = () => {
         div.classList.add('low')
         div.setAttribute('id', `point-${index + 1}`)
         div.style.height = `${elementHeight}px`
-        div.style.background = backgroundArray[index % 10]
+        div.style.background = BACKGROUND_ARRAY[index % 10]
         container.append(div)
     })
     return container

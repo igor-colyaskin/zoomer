@@ -4,7 +4,7 @@ export const store = {
         currentHighElement: 0,
         windowHeight: 10,
         elementHeight: 20,
-        elementNumber: 100,
+        elementNumber: 20,
     },
 
     getState() {
@@ -15,9 +15,12 @@ export const store = {
         const container = document.querySelector('.container');
         switch (action.type) {
             case  'SHIFT_LIST' :
+                const {shift, elementNumber, windowHeight} = this._state
+                const {shiftIncrement} = action.payload
+                if (shift === 0 && shiftIncrement < 0) return
+                if (shift === (elementNumber - windowHeight + 2) && shiftIncrement > 0) return
                 const newState = this._state.shift + action.payload.shiftIncrement
                 this._state.shift = newState
-                console.log(newState)
                 const listPosition = 20 - newState * 20
                 container.style.top = `${listPosition}px`
                 break
