@@ -10,10 +10,10 @@ export const Window = () => {
     window.classList.add('window')
     window.style.height = `${windowHeight * elementHeight + 20}px`
 
-    const scrollTopSlow = ScrollButton('scroll-top-slow', 1, 1)
-    const scrollTopQuick = ScrollButton('scroll-top-quick', 1, 2)
-    const scrollBottomSlow = ScrollButton('scroll-bottom-slow', -1, 1)
-    const scrollBottomQuick = ScrollButton('scroll-bottom-quick', -1, 2)
+    const scrollTopSlow = ScrollButton('scroll-top-slow', 'SHIFT_SLOW', 1)
+    const scrollTopQuick = ScrollButton('scroll-top-quick', 'SHIFT_QUICK', 1)
+    const scrollBottomSlow = ScrollButton('scroll-bottom-slow', 'SHIFT_SLOW', -1)
+    const scrollBottomQuick = ScrollButton('scroll-bottom-quick', 'SHIFT_QUICK', -1)
 
     window.append(
         ListContainer(),

@@ -2,17 +2,20 @@ import {store} from '../bll/store'
 
 const dispatch = store.dispatch.bind(store)
 
-export const ScrollButton = (scrollType, shiftIncrement, shiftSpeed) => {
+export const ScrollButton = (scrollClass, actionType, shiftDirection) => {
     const {windowHeight, elementHeight} = store.getState()
 
     const scrollButton = document.createElement('div')
     scrollButton.classList.add('scroll')
-    scrollButton.classList.add(scrollType)
+    scrollButton.classList.add(scrollClass)
     scrollButton.addEventListener('mouseenter', () => {
-        dispatch({type: 'SHIFT_LIST', payload: {shiftIncrement, shiftSpeed}})
+        dispatch({
+            type: `${actionType}_START`,
+            payload: {shiftDirection}
+        })
     })
     scrollButton.addEventListener('mouseleave', () => {
-        dispatch({type: 'STOP_SHIFT'})
+        dispatch({type: `${actionType}_STOP`})
     })
     return scrollButton
 }

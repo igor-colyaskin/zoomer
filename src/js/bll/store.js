@@ -4,8 +4,9 @@ export const store = {
         windowHeight: 10,
         elementHeight: 20,
         elementNumber: 400,
-        shiftIncrement: 0,
-        shiftSpeed: 0
+        shiftDirection: 0,
+        slowShift: false,
+        quickShift: false,
     },
 
     getState() {
@@ -37,6 +38,22 @@ export const store = {
                 break
             case  'STOP_SHIFT' :
                 this._state.shiftIncrement = 0
+                break
+            case  'SHIFT_SLOW_START' :
+                this._state.slowShift = true
+                console.log('slow: ' + this._state.slowShift + ', quick: ' +  this._state.quickShift + ', direction: ' + this._state.shiftDirection)
+                break
+            case  'SHIFT_SLOW_STOP' :
+                this._state.slowShift = false
+                console.log('slow: ' + this._state.slowShift + ', quick: ' +  this._state.quickShift + ', direction: ' + this._state.shiftDirection)
+                break
+            case  'SHIFT_QUICK_START' :
+                this._state.quickShift = true
+                console.log('slow: ' + this._state.slowShift + ', quick: ' +  this._state.quickShift + ', direction: ' + this._state.shiftDirection)
+                break
+            case  'SHIFT_QUICK_STOP' :
+                this._state.quickShift = false
+                console.log('slow: ' + this._state.slowShift + ', quick: ' +  this._state.quickShift + ', direction: ' + this._state.shiftDirection)
                 break
             default:
                 console.log('default actions')
