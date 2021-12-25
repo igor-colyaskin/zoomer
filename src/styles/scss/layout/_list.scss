@@ -5,45 +5,9 @@
   box-sizing: border-box;
 }
 
-.high {
-  height: 40px;
-}
-
-.low {
-  height: 16px
-}
-
-#point-1 {
-  background: red
-}
-
-#point-2 {
-  background: orange
-}
-
-#point-3 {
-  background: yellow
-}
-
-#point-4 {
-  background: limegreen
-}
-
-#point-5 {
-  background: aqua
-}
-
-#point-6 {
-  background: blue
-}
-
-#point-7 {
-  background: darkviolet
-}
-
 .scroll {
   position: absolute;
-  height: 16px;
+  height: 20px;
   width: 120px;
   background: rgba(255, 255, 255, 0.5);
 

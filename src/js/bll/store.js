@@ -1,17 +1,28 @@
 export const store = {
     _state: {
-        shift: 16,
+        shift: 0,
         currentHighElement: 0,
-        windowHeight: 140,
-        elementHeight: 2,
-        elementNubmer: 100,
+        windowHeight: 10,
+        elementHeight: 20,
+        elementNumber: 100,
     },
+
     getState() {
         return this._state
     },
-    //
-    // dispatch(action) {
-    //   this._state.common = commonReducer(this._state.common, action, this)
-    //   this._state.aboutPage = aboutPageReducer(this._state.aboutPage, action)
-    // }
+
+    dispatch(action) {
+        const container = document.querySelector('.container');
+        switch (action.type) {
+            case  'SHIFT_LIST' :
+                const newState = this._state.shift + action.payload.shiftIncrement
+                this._state.shift = newState
+                console.log(newState)
+                const listPosition = 20 - newState * 20
+                container.style.top = `${listPosition}px`
+                break
+            default:
+                console.log('default actions')
+        }
+    }
 }

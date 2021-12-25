@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe300a54-d4a5-4a11-b35d-3883423b7716" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/js/components/ListContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/bll/onScrollMouseEnter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/bll/onScrollMouseEnter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/bll/onPointMouseEnter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/bll/onScrollMouseEnter.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/bll/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/bll/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/ListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/ListContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Window.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" afterDir="false" />
@@ -44,7 +45,10 @@
       <updated>1640066928990</updated>
       <workItem from="1640066931675" duration="18724000" />
       <workItem from="1640100045335" duration="781000" />
-      <workItem from="1640255728234" duration="5765000" />
+      <workItem from="1640255728234" duration="5902000" />
+      <workItem from="1640264793415" duration="1420000" />
+      <workItem from="1640272419284" duration="5447000" />
+      <workItem from="1640411106840" duration="3898000" />
     </task>
     <task id="LOCAL-00001" summary="for-zoomer: pure points">
       <created>1640074798357</created>
@@ -74,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640094698978</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="for-zoomer: apply store">
+      <created>1640263385526</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640263385526</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +137,7 @@
     <MESSAGE value="for-zoomer: add listener" />
     <MESSAGE value="for-zoomer: window added" />
     <MESSAGE value="for-zoomer: find rect coords" />
-    <option name="LAST_COMMIT_MESSAGE" value="for-zoomer: find rect coords" />
+    <MESSAGE value="for-zoomer: apply store" />
+    <option name="LAST_COMMIT_MESSAGE" value="for-zoomer: apply store" />
   </component>
 </project>

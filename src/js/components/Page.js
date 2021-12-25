@@ -1,6 +1,4 @@
 import '../../styles/scss/style.scss'
-import {onPointMouseEnter} from "../bll/onPointMouseEnter";
-import {onScrollTopMouseEnter, onScrollBottomMouseEnter} from "../bll/onScrollMouseEnter";
 import {Window} from './Window.js'
 
 export default function (store) {
