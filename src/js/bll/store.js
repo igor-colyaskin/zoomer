@@ -3,8 +3,9 @@ export const store = {
         shift: 0,
         windowHeight: 10,
         elementHeight: 20,
-        elementNumber: 2000,
-        shiftIncrement: 0
+        elementNumber: 400,
+        shiftIncrement: 0,
+        shiftSpeed: 0
     },
 
     getState() {
@@ -16,12 +17,13 @@ export const store = {
         switch (action.type) {
             case  'SHIFT_LIST' :
                 this._state.shiftIncrement = action.payload.shiftIncrement
-                const {shift, elementNumber, windowHeight, shiftIncrement} = this._state
+                this._state.shiftSpeed = action.payload.shiftSpeed
+                const {elementNumber, windowHeight} = this._state
 
                 let shifter = setInterval(() => {
                     if (this._state.shiftIncrement === 0 ||
                         this._state.shift === 0 && this._state.shiftIncrement < 0 ||
-                        (this._state.shift === (elementNumber - windowHeight + 2) && this._state.shiftIncrement > 0)
+                        (this._state.shift === (elementNumber - windowHeight + 3) && this._state.shiftIncrement > 0)
                     ) {
                         clearInterval(shifter)
                         return
@@ -29,9 +31,9 @@ export const store = {
 
                     const newState = this._state.shift + action.payload.shiftIncrement
                     this._state.shift = newState
-                    const listPosition = 20 - newState * 20
+                    const listPosition = 40 - newState * 20
                     container.style.top = `${listPosition}px`
-                }, 10)
+                }, action.payload.shiftSpeed)
                 break
             case  'STOP_SHIFT' :
                 this._state.shiftIncrement = 0

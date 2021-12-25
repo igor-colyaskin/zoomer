@@ -1,25 +1,25 @@
-.point {
-  height: 20px;
-  width: 120px;
-  background: chocolate;
-  box-sizing: border-box;
-}
-
 .scroll {
   position: absolute;
   height: 20px;
   width: 120px;
   background: rgba(255, 255, 255, 0.5);
-
   box-sizing: border-box;
 }
 
-.scroll-top {
+.scroll-top-quick {
   top: 0;
   border-bottom: 2px dotted white;
 }
+.scroll-top-slow {
+  top: 20px;
+  border-bottom: 2px dotted white;
+}
 
-.scroll-bottom {
+.scroll-bottom-slow {
+  bottom: 20px;
+  border-top: 2px dotted white;
+}
+.scroll-bottom-quick {
   bottom: 0;
   border-top: 2px dotted white;
 }

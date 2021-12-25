@@ -1,4 +1,5 @@
 import {ListContainer} from './ListContainer'
+import {ScrollButton} from './ScrollButton'
 import {store} from '../bll/store'
 
 const dispatch = store.dispatch.bind(store)
@@ -7,28 +8,18 @@ export const Window = () => {
     const {windowHeight, elementHeight} = store.getState()
     const window = document.createElement('div')
     window.classList.add('window')
-    window.style.height = `${windowHeight * elementHeight}px`
+    window.style.height = `${windowHeight * elementHeight + 20}px`
 
-    const scrollTop = document.createElement('div')
-    scrollTop.classList.add('scroll')
-    scrollTop.classList.add('scroll-top')
-    scrollTop.addEventListener('mouseenter', () => {
-        dispatch({type: 'SHIFT_LIST', payload: {shiftIncrement: 1}})
-    })
-    scrollTop.addEventListener('mouseleave', () => {
-        dispatch({type: 'STOP_SHIFT'})
-    })
+    const scrollTopSlow = ScrollButton('scroll-top-slow', 1, 1)
+    const scrollTopQuick = ScrollButton('scroll-top-quick', 1, 2)
+    const scrollBottomSlow = ScrollButton('scroll-bottom-slow', -1, 1)
+    const scrollBottomQuick = ScrollButton('scroll-bottom-quick', -1, 2)
 
-    const scrollBottom = document.createElement('div')
-    scrollBottom.classList.add('scroll')
-    scrollBottom.classList.add('scroll-bottom')
-    scrollBottom.addEventListener('mouseenter', () => {
-        dispatch({type: 'SHIFT_LIST', payload: {shiftIncrement: -1}})
-    })
-    scrollBottom.addEventListener('mouseleave', () => {
-        dispatch({type: 'STOP_SHIFT'})
-    })
-
-    window.append(ListContainer(), scrollTop, scrollBottom)
+    window.append(
+        ListContainer(),
+        scrollTopQuick,
+        scrollTopSlow,
+        scrollBottomSlow,
+        scrollBottomQuick)
     return window
 }
