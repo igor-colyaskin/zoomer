@@ -15,12 +15,18 @@ export const Window = () => {
     scrollTop.addEventListener('mouseenter', () => {
         dispatch({type: 'SHIFT_LIST', payload: {shiftIncrement: 1}})
     })
+    scrollTop.addEventListener('mouseleave', () => {
+        dispatch({type: 'STOP_SHIFT'})
+    })
 
     const scrollBottom = document.createElement('div')
     scrollBottom.classList.add('scroll')
     scrollBottom.classList.add('scroll-bottom')
     scrollBottom.addEventListener('mouseenter', () => {
         dispatch({type: 'SHIFT_LIST', payload: {shiftIncrement: -1}})
+    })
+    scrollBottom.addEventListener('mouseleave', () => {
+        dispatch({type: 'STOP_SHIFT'})
     })
 
     window.append(ListContainer(), scrollTop, scrollBottom)

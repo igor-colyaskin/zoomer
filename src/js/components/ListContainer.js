@@ -19,6 +19,7 @@ export const ListContainer = () => {
         div.style.height = `${elementHeight}px`
         div.style.background = BACKGROUND_ARRAY[index % 10]
         container.append(div)
+        div.innerText = index
     })
     return container
 }
