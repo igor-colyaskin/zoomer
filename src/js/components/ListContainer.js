@@ -13,10 +13,10 @@ export const ListContainer = () => {
     const arr = Array(elementNumber).fill(0)
     arr.map((element, index) => {
         const div = document.createElement('div')
-        div.classList.add('low')
+        div.classList.add('point')
         div.setAttribute('id', `point-${index + 1}`)
         div.style.height = `${elementHeight}px`
-        div.style.background = BACKGROUND_ARRAY[index % 10]
+        div.style.background = `rgb(${BACKGROUND_ARRAY[index % 8]})`
         container.append(div)
         div.innerText = index
     })

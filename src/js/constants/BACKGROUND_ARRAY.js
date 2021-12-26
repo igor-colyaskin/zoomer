@@ -1,11 +1,10 @@
 export const BACKGROUND_ARRAY = [
-    'deeppink',
-    'orange',
-    'gold',
-    'yellowgreen',
-    'aqua',
-    'blue',
-    'indigo',
-    'purple',
-    'black',
-    'magenta']
+    '158, 232, 199',
+    '166, 232, 202',
+    '176, 232, 207',
+    '186, 232, 211',
+    '195, 232, 215',
+    '204, 232, 219',
+    '213, 232, 223',
+    '223, 232, 228'
+    ]

@@ -3,7 +3,7 @@ export const store = {
         shift: 0,
         windowHeight: 10,
         elementHeight: 20,
-        elementNumber: 400,
+        elementNumber: 100,
         shiftDirection: 0,
         slowShift: false,
         quickShift: false,
@@ -16,44 +16,59 @@ export const store = {
     dispatch(action) {
         const container = document.querySelector('.container');
         switch (action.type) {
-            case  'SHIFT_LIST' :
-                this._state.shiftIncrement = action.payload.shiftIncrement
-                this._state.shiftSpeed = action.payload.shiftSpeed
-                const {elementNumber, windowHeight} = this._state
+            case  'SHIFT_SLOW_START' :
+                this._state.slowShift = true
+
+                this._state.shiftDirection = action.payload.shiftDirection
+                let {elementNumber, windowHeight} = this._state
 
                 let shifter = setInterval(() => {
-                    if (this._state.shiftIncrement === 0 ||
-                        this._state.shift === 0 && this._state.shiftIncrement < 0 ||
-                        (this._state.shift === (elementNumber - windowHeight + 3) && this._state.shiftIncrement > 0)
+                    if (this._state.shiftDirection === 0 ||
+                        !this._state.slowShift ||
+                        this._state.shift === 0 && this._state.shiftDirection < 0 ||
+                        (this._state.shift === (elementNumber - windowHeight + 3) && this._state.shiftDirection > 0)
                     ) {
                         clearInterval(shifter)
                         return
                     }
 
-                    const newState = this._state.shift + action.payload.shiftIncrement
+                    const newState = this._state.shift + action.payload.shiftDirection
                     this._state.shift = newState
                     const listPosition = 40 - newState * 20
                     container.style.top = `${listPosition}px`
-                }, action.payload.shiftSpeed)
-                break
-            case  'STOP_SHIFT' :
-                this._state.shiftIncrement = 0
-                break
-            case  'SHIFT_SLOW_START' :
-                this._state.slowShift = true
-                console.log('slow: ' + this._state.slowShift + ', quick: ' +  this._state.quickShift + ', direction: ' + this._state.shiftDirection)
+                }, 200)
                 break
             case  'SHIFT_SLOW_STOP' :
                 this._state.slowShift = false
-                console.log('slow: ' + this._state.slowShift + ', quick: ' +  this._state.quickShift + ', direction: ' + this._state.shiftDirection)
+                this._state.shiftDirection = 0
                 break
             case  'SHIFT_QUICK_START' :
                 this._state.quickShift = true
-                console.log('slow: ' + this._state.slowShift + ', quick: ' +  this._state.quickShift + ', direction: ' + this._state.shiftDirection)
+                elementNumber = this._state.elementNumber
+                windowHeight = this._state.windowHeight
+
+                this._state.shiftDirection = action.payload.shiftDirection
+
+                let shifterQuick = setInterval(() => {
+                    if (this._state.shiftDirection === 0 ||
+                        !this._state.quickShift ||
+                        this._state.shift === 0 && this._state.shiftDirection < 0 ||
+                        (this._state.shift === (elementNumber - windowHeight + 3) && this._state.shiftDirection > 0)
+                    ) {
+                        clearInterval(shifterQuick)
+                        return
+                    }
+
+                    const newState = this._state.shift + action.payload.shiftDirection
+                    this._state.shift = newState
+                    const listPosition = 40 - newState * 20
+                    container.style.top = `${listPosition}px`
+                }, 10)
+
                 break
             case  'SHIFT_QUICK_STOP' :
                 this._state.quickShift = false
-                console.log('slow: ' + this._state.slowShift + ', quick: ' +  this._state.quickShift + ', direction: ' + this._state.shiftDirection)
+                this._state.shiftDirection = 0
                 break
             default:
                 console.log('default actions')
