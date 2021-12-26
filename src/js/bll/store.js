@@ -1,9 +1,9 @@
 export const store = {
     _state: {
         shift: 0,
-        windowHeight: 10,
-        elementHeight: 20,
-        elementNumber: 100,
+        windowHeight: 24,
+        elementHeight: 24,
+        elementNumber: 400,
         shiftDirection: 0,
         slowShift: false,
         quickShift: false,
@@ -23,10 +23,12 @@ export const store = {
                 let {elementNumber, windowHeight} = this._state
 
                 let shifter = setInterval(() => {
+                    console.log(this._state.shift)
+
                     if (this._state.shiftDirection === 0 ||
                         !this._state.slowShift ||
                         this._state.shift === 0 && this._state.shiftDirection < 0 ||
-                        (this._state.shift === (elementNumber - windowHeight + 3) && this._state.shiftDirection > 0)
+                        (this._state.shift === (elementNumber - windowHeight) && this._state.shiftDirection > 0)
                     ) {
                         clearInterval(shifter)
                         return
@@ -34,7 +36,7 @@ export const store = {
 
                     const newState = this._state.shift + action.payload.shiftDirection
                     this._state.shift = newState
-                    const listPosition = 40 - newState * 20
+                    const listPosition = 48 - newState * 24
                     container.style.top = `${listPosition}px`
                 }, 200)
                 break
@@ -53,7 +55,7 @@ export const store = {
                     if (this._state.shiftDirection === 0 ||
                         !this._state.quickShift ||
                         this._state.shift === 0 && this._state.shiftDirection < 0 ||
-                        (this._state.shift === (elementNumber - windowHeight + 3) && this._state.shiftDirection > 0)
+                        (this._state.shift === (elementNumber - windowHeight) && this._state.shiftDirection > 0)
                     ) {
                         clearInterval(shifterQuick)
                         return
@@ -61,7 +63,7 @@ export const store = {
 
                     const newState = this._state.shift + action.payload.shiftDirection
                     this._state.shift = newState
-                    const listPosition = 40 - newState * 20
+                    const listPosition = 48 - newState * 24
                     container.style.top = `${listPosition}px`
                 }, 10)
 

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe300a54-d4a5-4a11-b35d-3883423b7716" name="Changes" comment="">
+    <list default="true" id="fe300a54-d4a5-4a11-b35d-3883423b7716" name="Changes" comment="for-zoomer: 2 speed scroll works!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/bll/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/bll/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/ListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/ListContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/constants/BACKGROUND_ARRAY.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/constants/BACKGROUND_ARRAY.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
       <workItem from="1640255728234" duration="5902000" />
       <workItem from="1640264793415" duration="1420000" />
       <workItem from="1640272419284" duration="5447000" />
-      <workItem from="1640411106840" duration="21372000" />
+      <workItem from="1640411106840" duration="26489000" />
     </task>
     <task id="LOCAL-00001" summary="for-zoomer: pure points">
       <created>1640074798357</created>
@@ -117,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640457165640</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="for-zoomer: 2 speed scroll works!">
+      <created>1640522834176</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1640522834176</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +184,7 @@
     <MESSAGE value="for-zoomer: shift with setInterval" />
     <MESSAGE value="for-zoomer: slow and quick shift" />
     <MESSAGE value="for-zoomer: slow and quick shift actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="for-zoomer: slow and quick shift actions" />
+    <MESSAGE value="for-zoomer: 2 speed scroll works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="for-zoomer: 2 speed scroll works!" />
   </component>
 </project>

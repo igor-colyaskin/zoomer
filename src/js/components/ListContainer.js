@@ -3,7 +3,7 @@ import {BACKGROUND_ARRAY} from '../constants/BACKGROUND_ARRAY'
 
 export const ListContainer = () => {
     const {shift, elementHeight, elementNumber} = store.getState()
-    const listPosition = 40 - shift * 20
+    const listPosition = 48 - shift * 20
 
 
     const container = document.createElement('div')
@@ -11,14 +11,19 @@ export const ListContainer = () => {
     container.style.top = `${listPosition}px`
 
     const arr = Array(elementNumber).fill(0)
-    arr.map((element, index) => {
-        const div = document.createElement('div')
-        div.classList.add('point')
-        div.setAttribute('id', `point-${index + 1}`)
-        div.style.height = `${elementHeight}px`
-        div.style.background = `rgb(${BACKGROUND_ARRAY[index % 8]})`
-        container.append(div)
-        div.innerText = index
+    arr.map((el, index) => {
+        const elementContainer = document.createElement('div')
+        elementContainer.classList.add('element-container')
+        elementContainer.setAttribute('id', `element-container-${index + 1}`)
+        elementContainer.style.maxHeight = `${elementHeight}px`
+
+        const elementContent = document.createElement('div')
+        elementContent.classList.add('element-content')
+        elementContent.style.background = `rgb(${BACKGROUND_ARRAY[index % 8]})`
+        elementContent.innerText = index
+
+        elementContainer.append(elementContent)
+        container.append(elementContainer)
     })
     return container
 }

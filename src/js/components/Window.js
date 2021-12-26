@@ -8,7 +8,7 @@ export const Window = () => {
     const {windowHeight, elementHeight} = store.getState()
     const window = document.createElement('div')
     window.classList.add('window')
-    window.style.height = `${windowHeight * elementHeight + 20}px`
+    window.style.height = `${windowHeight * 24 + 96}px`
 
     const scrollTopSlow = ScrollButton('scroll-top-slow', 'SHIFT_SLOW', 1)
     const scrollTopQuick = ScrollButton('scroll-top-quick', 'SHIFT_QUICK', 1)

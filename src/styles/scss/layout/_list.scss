@@ -1,26 +1,39 @@
 .scroll {
   position: absolute;
-  height: 20px;
+  height: 24px;
   width: 120px;
   background: rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
 }
-.point {
-  border-top: 1px solid rgb(121, 201, 165);
+
+.element-container {
+  box-sizing: border-box;
 }
+
+.element-content{
+  height: 24px;
+  border-top: 1px solid rgb(121, 201, 165);
+  padding: 2px 4px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .scroll-top-quick {
   top: 0;
   border-bottom: 2px dotted black;
 }
+
 .scroll-top-slow {
-  top: 20px;
+  top: 24px;
   border-bottom: 2px dotted black;
 }
 
 .scroll-bottom-slow {
-  bottom: 20px;
+  bottom: 24px;
   border-top: 2px dotted black;
 }
+
 .scroll-bottom-quick {
   bottom: 0;
   border-top: 2px dotted black;
