@@ -15,7 +15,6 @@ export const ListContainer = () => {
         const elementContainer = document.createElement('div')
         elementContainer.classList.add('element-container')
         elementContainer.setAttribute('id', `element-container-${index + 1}`)
-        elementContainer.style.maxHeight = `${elementHeight}px`
 
         const elementContent = document.createElement('div')
         elementContent.classList.add('element-content')

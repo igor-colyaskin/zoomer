@@ -2,7 +2,6 @@ export const store = {
     _state: {
         shift: 0,
         windowHeight: 24,
-        elementHeight: 24,
         elementNumber: 400,
         shiftDirection: 0,
         slowShift: false,
@@ -23,7 +22,6 @@ export const store = {
                 let {elementNumber, windowHeight} = this._state
 
                 let shifter = setInterval(() => {
-                    console.log(this._state.shift)
 
                     if (this._state.shiftDirection === 0 ||
                         !this._state.slowShift ||
@@ -42,9 +40,13 @@ export const store = {
                 break
             case  'SHIFT_SLOW_STOP' :
                 this._state.slowShift = false
-                this._state.shiftDirection = 0
+                // this._state.shiftDirection = 0
                 break
             case  'SHIFT_QUICK_START' :
+
+
+                container.style.setProperty('--element-container-height', '12px')
+
                 this._state.quickShift = true
                 elementNumber = this._state.elementNumber
                 windowHeight = this._state.windowHeight
@@ -52,10 +54,11 @@ export const store = {
                 this._state.shiftDirection = action.payload.shiftDirection
 
                 let shifterQuick = setInterval(() => {
+                    console.log(this._state.shift)
                     if (this._state.shiftDirection === 0 ||
                         !this._state.quickShift ||
                         this._state.shift === 0 && this._state.shiftDirection < 0 ||
-                        (this._state.shift === (elementNumber - windowHeight) && this._state.shiftDirection > 0)
+                        (this._state.shift >= (elementNumber - windowHeight * 2) && this._state.shiftDirection > 0)
                     ) {
                         clearInterval(shifterQuick)
                         return
@@ -63,14 +66,16 @@ export const store = {
 
                     const newState = this._state.shift + action.payload.shiftDirection
                     this._state.shift = newState
-                    const listPosition = 48 - newState * 24
+                    const listPosition = 48 - newState * 12
                     container.style.top = `${listPosition}px`
-                }, 10)
+                }, 50)
 
                 break
             case  'SHIFT_QUICK_STOP' :
+                container.style.setProperty('--element-container-height', '24px')
+
                 this._state.quickShift = false
-                this._state.shiftDirection = 0
+                // this._state.shiftDirection = 0
                 break
             default:
                 console.log('default actions')

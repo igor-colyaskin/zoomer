@@ -1,6 +1,5 @@
 .scroll {
   position: absolute;
-  height: 24px;
   width: 120px;
   background: rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
@@ -8,6 +7,7 @@
 
 .element-container {
   box-sizing: border-box;
+  height: var(--element-container-height)
 }
 
 .element-content{
@@ -20,21 +20,33 @@
 }
 
 .scroll-top-quick {
-  top: 0;
-  border-bottom: 2px dotted black;
+  top: 4px;
+  height: 24px;
+  width: 112px;
+  margin: 0 4px;
+  border: 1px dotted black;
+  background: violet;
 }
 
 .scroll-top-slow {
-  top: 24px;
-  border-bottom: 2px dotted black;
+  top: 0px;
+  height: 48px;
+  border-bottom: 1px dotted black;
+  background: yellow;
 }
 
 .scroll-bottom-slow {
-  bottom: 24px;
-  border-top: 2px dotted black;
+  bottom: 0;
+  height: 48px;
+  border-top: 1px dotted black;
+  background: yellow;
 }
 
 .scroll-bottom-quick {
-  bottom: 0;
-  border-top: 2px dotted black;
+  bottom: 4px;
+  height: 24px;
+  width: 112px;
+  margin: 0 4px;
+  border: 1px dotted black;
+  background: violet;
 }
