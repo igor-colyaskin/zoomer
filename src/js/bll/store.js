@@ -6,6 +6,7 @@ export const store = {
         shiftDirection: 0,
         slowShift: false,
         quickShift: false,
+        isScrollEnabled: false
     },
 
     getState() {
@@ -15,6 +16,23 @@ export const store = {
     dispatch(action) {
         const container = document.querySelector('.container');
         switch (action.type) {
+            case 'RECURSIVE_START':
+                console.log('recursive on')
+                this._state.isScrollEnabled = true
+                let repeater = setTimeout(function step() {
+
+                    if(store._state.isScrollEnabled === false) {
+                        clearTimeout(repeater)
+                    } else {
+                        repeater = setTimeout(step, 500);
+                        console.log('step')
+                    }
+                }, 500);
+                break
+            case 'RECURSIVE_STOP':
+                console.log('recursive off')
+                this._state.isScrollEnabled = false
+                break
             case  'SHIFT_SLOW_START' :
                 this._state.slowShift = true
 

@@ -15,6 +15,7 @@ export const Window = () => {
     const scrollBottomSlow = ScrollButton('scroll-bottom-slow', 'SHIFT_SLOW', -1)
     const scrollBottomQuick = ScrollButton('scroll-bottom-quick', 'SHIFT_QUICK', -1)
 
+
     scrollTopSlow.append(scrollTopQuick)
     scrollBottomSlow.append(scrollBottomQuick)
 

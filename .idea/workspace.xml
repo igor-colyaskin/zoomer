@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe300a54-d4a5-4a11-b35d-3883423b7716" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/variables/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/bll/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/bll/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/ListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/ListContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Window.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/components/_button.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/components/_link.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/components/_logo.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_page.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +45,10 @@
       <workItem from="1640255728234" duration="5902000" />
       <workItem from="1640264793415" duration="1420000" />
       <workItem from="1640272419284" duration="5447000" />
-      <workItem from="1640411106840" duration="31368000" />
+      <workItem from="1640411106840" duration="32180000" />
+      <workItem from="1640578534633" duration="54000" />
+      <workItem from="1640578728794" duration="627000" />
+      <workItem from="1640612522437" duration="2114000" />
     </task>
     <task id="LOCAL-00001" summary="for-zoomer: pure points">
       <created>1640074798357</created>
@@ -135,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640538288938</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="for-zoomer: don't stop by quick top scroll">
+      <created>1640543316207</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1640543316207</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +201,7 @@
     <MESSAGE value="for-zoomer: slow and quick shift actions" />
     <MESSAGE value="for-zoomer: 2 speed scroll works!" />
     <MESSAGE value="all works with 2 speed, window height change works" />
-    <option name="LAST_COMMIT_MESSAGE" value="all works with 2 speed, window height change works" />
+    <MESSAGE value="for-zoomer: don't stop by quick top scroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="for-zoomer: don't stop by quick top scroll" />
   </component>
 </project>
