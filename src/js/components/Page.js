@@ -6,10 +6,7 @@ export default function (store) {
     const wrapper = document.createElement('div')
     wrapper.classList.add('wrapper')
 
-    const buttonForRecursiveTimeout = ScrollButton('recursive-timeout', 'RECURSIVE', -1)
-
-
     const window = Window()
-    wrapper.append(window, buttonForRecursiveTimeout)
+    wrapper.append(window)
     return wrapper
 }

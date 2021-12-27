@@ -4,9 +4,8 @@ export const store = {
         windowHeight: 24,
         elementNumber: 400,
         shiftDirection: 0,
-        slowShift: false,
-        quickShift: false,
-        isScrollEnabled: false
+        scrollRate: 0,
+        delayArray: [0, 400, 40]
     },
 
     getState() {
@@ -16,85 +15,40 @@ export const store = {
     dispatch(action) {
         const container = document.querySelector('.container');
         switch (action.type) {
-            case 'RECURSIVE_START':
-                console.log('recursive on')
-                this._state.isScrollEnabled = true
-                let repeater = setTimeout(function step() {
+            case 'SHIFT_SLOW_START':
+                this._state.scrollRate = 1
+                this._state.shiftDirection = action.payload.shiftDirection
+                let {elementNumber, windowHeight, delayArray} = this._state
 
-                    if(store._state.isScrollEnabled === false) {
+                let delay = delayArray[1]
+                let repeater = setTimeout(function step() {
+                    if(!store._state.scrollRate||
+                        store._state.shift === 0 && store._state.shiftDirection < 0 ||
+                        (store._state.shift === (elementNumber - windowHeight) && store._state.shiftDirection > 0)
+                ) {
                         clearTimeout(repeater)
                     } else {
-                        repeater = setTimeout(step, 500);
-                        console.log('step')
+                        delay = delayArray[store._state.scrollRate]
+                        repeater = setTimeout(step, delay);
+                        const newState = store._state.shift + action.payload.shiftDirection
+                        store._state.shift = newState
+                        const listPosition = 48 - newState * 24
+                        container.style.top = `${listPosition}px`
                     }
-                }, 500);
+                }, delay);
                 break
-            case 'RECURSIVE_STOP':
-                console.log('recursive off')
-                this._state.isScrollEnabled = false
+            case 'SHIFT_SLOW_STOP':
+                this._state.scrollRate= 0
                 break
-            case  'SHIFT_SLOW_START' :
-                this._state.slowShift = true
-
-                this._state.shiftDirection = action.payload.shiftDirection
-                let {elementNumber, windowHeight} = this._state
-
-                let shifter = setInterval(() => {
-
-                    if (this._state.shiftDirection === 0 ||
-                        !this._state.slowShift ||
-                        this._state.shift === 0 && this._state.shiftDirection < 0 ||
-                        (this._state.shift === (elementNumber - windowHeight) && this._state.shiftDirection > 0)
-                    ) {
-                        clearInterval(shifter)
-                        return
-                    }
-
-                    const newState = this._state.shift + action.payload.shiftDirection
-                    this._state.shift = newState
-                    const listPosition = 48 - newState * 24
-                    container.style.top = `${listPosition}px`
-                }, 200)
+            case 'SHIFT_QUICK_START':
+                this._state.scrollRate = 2
                 break
-            case  'SHIFT_SLOW_STOP' :
-                this._state.slowShift = false
-                // this._state.shiftDirection = 0
+            case 'SHIFT_QUICK_STOP':
+                this._state.scrollRate = 1
                 break
-            case  'SHIFT_QUICK_START' :
 
+                // container.style.setProperty('--element-container-height', '12px')
 
-                container.style.setProperty('--element-container-height', '12px')
-
-                this._state.quickShift = true
-                elementNumber = this._state.elementNumber
-                windowHeight = this._state.windowHeight
-
-                this._state.shiftDirection = action.payload.shiftDirection
-
-                let shifterQuick = setInterval(() => {
-                    console.log(this._state.shift)
-                    if (this._state.shiftDirection === 0 ||
-                        !this._state.quickShift ||
-                        this._state.shift === 0 && this._state.shiftDirection < 0 ||
-                        (this._state.shift >= (elementNumber - windowHeight * 2) && this._state.shiftDirection > 0)
-                    ) {
-                        clearInterval(shifterQuick)
-                        return
-                    }
-
-                    const newState = this._state.shift + action.payload.shiftDirection
-                    this._state.shift = newState
-                    const listPosition = 48 - newState * 12
-                    container.style.top = `${listPosition}px`
-                }, 50)
-
-                break
-            case  'SHIFT_QUICK_STOP' :
-                container.style.setProperty('--element-container-height', '24px')
-
-                this._state.quickShift = false
-                // this._state.shiftDirection = 0
-                break
             default:
                 console.log('default actions')
         }
