@@ -7,7 +7,8 @@
 
 .element-container {
   box-sizing: border-box;
-  height: var(--element-container-height)
+  height: var(--element-container-height);
+  transition: height 2s ease-in-out;
 }
 
 .element-content{
