@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe300a54-d4a5-4a11-b35d-3883423b7716" name="Changes" comment="">
+    <list default="true" id="fe300a54-d4a5-4a11-b35d-3883423b7716" name="Changes" comment="for-zoomer: changed for demonstration purposes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/bll/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/bll/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_page.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,10 @@
       <workItem from="1640411106840" duration="32180000" />
       <workItem from="1640578534633" duration="54000" />
       <workItem from="1640578728794" duration="627000" />
-      <workItem from="1640612522437" duration="7508000" />
+      <workItem from="1640612522437" duration="11666000" />
+      <workItem from="1642521819433" duration="7000" />
+      <workItem from="1650882945104" duration="154000" />
+      <workItem from="1650883534584" duration="721000" />
     </task>
     <task id="LOCAL-00001" summary="for-zoomer: pure points">
       <created>1640074798357</created>
@@ -152,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640617561938</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="for-zoomer: recursive setTimout works with slow and quick">
+      <created>1640622157365</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1640622157365</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,11 +204,6 @@
         </entry>
       </map>
     </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="d537c55a-b257-4c4b-bf80-c38eb82ed48b" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -215,6 +222,8 @@
     <MESSAGE value="for-zoomer: don't stop by quick top scroll" />
     <MESSAGE value="for-zoomer: start apply recursive setTimout instead setInterval" />
     <MESSAGE value="for-zoomer: recursive setTimout works with slow" />
-    <option name="LAST_COMMIT_MESSAGE" value="for-zoomer: recursive setTimout works with slow" />
+    <MESSAGE value="for-zoomer: recursive setTimout works with slow and quick" />
+    <MESSAGE value="for-zoomer: changed for demonstration purposes" />
+    <option name="LAST_COMMIT_MESSAGE" value="for-zoomer: changed for demonstration purposes" />
   </component>
 </project>

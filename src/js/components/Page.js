@@ -1,12 +1,15 @@
 import '../../styles/scss/style.scss'
-import {Window} from './Window.js'
-import {ScrollButton} from './ScrollButton'
+// import {Window} from './Window.js'
+// import {ScrollButton} from './ScrollButton'
 
-export default function (store) {
+export default function () {
     const wrapper = document.createElement('div')
     wrapper.classList.add('wrapper')
+    //
+    // const window = Window()
+    // wrapper.append(window)
+    wrapper.innerText = 'Hello world'
 
-    const window = Window()
-    wrapper.append(window)
+    console.log(Math.ceil(Math.random() * 100))
     return wrapper
 }

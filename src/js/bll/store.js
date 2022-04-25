@@ -2,10 +2,10 @@ export const store = {
     _state: {
         shift: 0,
         windowHeight: 24,
-        elementNumber: 1000,
+        elementNumber: 10000,
         shiftDirection: 0,
         scrollRate: 0,
-        delayArray: [0, 400, 100],
+        delayArray: [0, 400, 10],
         containerHeightArray: [24, 24, 12]
     },
 
@@ -25,6 +25,7 @@ export const store = {
                 let repeater = setTimeout(function step() {
                     const {scrollRate, shift, shiftDirection} = store._state
 
+
                     if (!scrollRate ||
                         shift === 0 && shiftDirection < 0 ||
                         (shift === (elementNumber - windowHeight) && shiftDirection > 0)
@@ -33,15 +34,17 @@ export const store = {
                     } else {
                         delay = delayArray[scrollRate]
                         repeater = setTimeout(step, delay);
-                        const newState = shift + action.payload.shiftDirection
+                        const newState = shift + action.payload.shiftDirection * scrollRate
                         store._state.shift = newState
-                        const listPosition = 48 - newState * containerHeightArray[scrollRate]
+                        console.log('newState', newState)
+                        const listPosition = 48 - newState * containerHeightArray[scrollRate] * scrollRate
                         container.style.top = `${listPosition}px`
                     }
                 }, delay);
                 break
             case 'SHIFT_SLOW_STOP':
                 this._state.scrollRate = 0
+                console.log('after slow stop', this._state.shift)
                 break
             case 'SHIFT_QUICK_START':
                 container.style.setProperty('--element-container-height', '12px')
@@ -49,7 +52,12 @@ export const store = {
                 break
             case 'SHIFT_QUICK_STOP':
                 this._state.scrollRate = 1
+                const transitionShift = this._state.shift * 2
+                this._state.shift = transitionShift
+                container.style.top = `${48 - transitionShift * 24}px`
+
                 container.style.setProperty('--element-container-height', '24px')
+                console.log('after quick stop', this._state.shift)
                 break
 
 

@@ -8,14 +8,14 @@
 .element-container {
   box-sizing: border-box;
   height: var(--element-container-height);
-  transition: height 2s ease-in-out;
+  transition: height .5s ease-in-out;
 }
 
 .element-content{
   height: 24px;
   border-top: 1px solid rgb(121, 201, 165);
   padding: 2px 4px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 500;
 }
@@ -30,7 +30,7 @@
 }
 
 .scroll-top-slow {
-  top: 0px;
+  top: 0;
   height: 48px;
   border-bottom: 1px dotted black;
   background: yellow;
