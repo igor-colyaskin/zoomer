@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe300a54-d4a5-4a11-b35d-3883423b7716" name="Changes" comment="for-zoomer: changed for demonstration purposes">
+    <list default="true" id="fe300a54-d4a5-4a11-b35d-3883423b7716" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/bll/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/bll/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/layout/_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/layout/_page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +47,7 @@
       <workItem from="1640612522437" duration="11666000" />
       <workItem from="1642521819433" duration="7000" />
       <workItem from="1650882945104" duration="154000" />
-      <workItem from="1650883534584" duration="721000" />
+      <workItem from="1650883534584" duration="4239000" />
     </task>
     <task id="LOCAL-00001" summary="for-zoomer: pure points">
       <created>1640074798357</created>
@@ -164,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640622157365</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="for-zoomer: changed for demonstration purposes">
+      <created>1650884269432</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1650884269432</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +191,17 @@
                 </map>
               </option>
               <option name="BEK_SORT_TYPE" value="1" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
